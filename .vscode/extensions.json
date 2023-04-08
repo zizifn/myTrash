@@ -5,6 +5,7 @@
     "eamodio.gitlens",
     "ms-vscode.vscode-typescript-tslint-plugin",
     "GitHub.copilot",
-    "GitHub.copilot-labs"
+    "GitHub.copilot-labs",
+    "bradlc.vscode-tailwindcss"
   ]
 }

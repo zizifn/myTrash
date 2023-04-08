@@ -1,4 +1,4 @@
-import {WebSocketPair} from '@cloudflare/workers-types';
+// import {WebSocketPair} from '@cloudflare/workers-types';
 
 export async function GET(request: Request) {
   const upgradeHeader = request.headers.get('Upgrade');
@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   const webSocketPair = new WebSocketPair();
   const [client, server] = Object.values(webSocketPair);
 
-  server.accept();
+  (server as any).accept();
   server.addEventListener('message', (event) => {
     console.log(event.data);
     server.send(`server reponse after client sent ${event.data}`);

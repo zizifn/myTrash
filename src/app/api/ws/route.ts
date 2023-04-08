@@ -3,7 +3,9 @@ import {WebSocketPair, Response} from '@cloudflare/workers-types';
 export async function GET(request: Request) {
   const upgradeHeader = request.headers.get('Upgrade');
   if (!upgradeHeader || upgradeHeader !== 'websocket') {
-    return new Response('Expected Upgrade: websocket', { status: 426 });
+    return new Response('not websocket', {
+      status: 200
+    })
   }
 
   const webSocketPair = new WebSocketPair();
@@ -14,6 +16,7 @@ export async function GET(request: Request) {
     console.log(event.data);
     server.send(`server reponse after client sent ${event.data}`);
   });
+  console.log('client send');
   server.send(`client sned`);
   return new Response(null, {
     status: 101,

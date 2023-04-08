@@ -1,4 +1,4 @@
-import {WebSocketPair, Response} from '@cloudflare/workers-types';
+import {WebSocketPair} from '@cloudflare/workers-types';
 
 export async function GET(request: Request) {
   const upgradeHeader = request.headers.get('Upgrade');
@@ -21,5 +21,5 @@ export async function GET(request: Request) {
   return new Response(null, {
     status: 101,
     webSocket: client,
-  });
+  } as any);
 }

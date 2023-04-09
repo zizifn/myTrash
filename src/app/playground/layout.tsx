@@ -5,8 +5,9 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <span>playground</span>
-      <div>{children}</div>
+      <div className="m-0 flex w-full flex-auto flex-col items-stretch justify-center p-0">
+        {children}
+      </div>
     </>
   );
 }

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "page:watch": "npx @cloudflare/next-on-pages --watch",
+    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat"
   },
   "dependencies": {
     "@types/node": "18.15.11",
@@ -22,11 +24,14 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^0.7.0",
     "@cloudflare/workers-types": "^4.20230404.0",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.7",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^3.3.1",
+    "vercel": "^28.18.4",
+    "wrangler": "^2.14.0"
   }
 }

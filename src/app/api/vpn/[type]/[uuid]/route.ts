@@ -1,4 +1,4 @@
-import YAML from "yaml";
+import { getCalshConfig } from "./clash-config";
 export const config = {
   runtime: "edge",
   // api: {
@@ -12,12 +12,21 @@ export async function GET(
   request: Request,
   context: { params: { type: VPNType; uuid: string } }
 ) {
-  console.log(request.url);
-  console.log(context);
-  console.log(YAML.stringify(""));
+  const url = new URL(request.url);
+  console.log(url);
+  let serverStr = url.searchParams.get("servers") || "";
+  const servers = serverStr.split(",").map((s) => {
+    const [host, port, publicKey] = s.split(":");
+    return {
+      host,
+      port,
+      publicKey,
+    };
+  });
+  const { type, uuid } = context.params;
   if (context.params.type === "clash") {
     console.log("-----");
-    return new Response("xxxxxx", {
+    return new Response(getCalshConfig(uuid, servers), {
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
       },

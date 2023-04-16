@@ -1,5 +1,5 @@
-import React from "react";
-// import { SearchableRepo } from "../../../components/searchable-repo";
+import React, { Suspense } from "react";
+import { SearchableRepo } from "./searchable-repo";
 
 export const metadata = {
   title: "client search demo",
@@ -10,41 +10,42 @@ type Repo = {
   name: string;
 };
 
-export default async function Repos() {
-  // let uint8Array = new Uint8Array([
-  //   123, 10, 32, 32, 34, 117, 115, 101, 114, 73, 100, 34, 58, 32, 49, 44, 10,
-  //   32, 32, 34, 105, 100, 34, 58, 32, 49, 44, 10, 32, 32, 34, 116, 105, 116,
-  //   108, 101, 34, 58, 32, 34, 100, 101, 108, 101, 99, 116, 117, 115, 32, 97,
-  //   117, 116, 32, 97, 32, 102, 97, 108, 115, 101, 10, 125,
-  // ]);
+export default function ClientSearch() {
+  return (
+    <>
+      <h2 className="h-10 text-xl text-cyan-400">client search demo</h2>
+      <Suspense fallback={<div>loading repo...</div>}>
+        <Repos></Repos>
+      </Suspense>
+    </>
+  );
+}
 
-  // console.log(new TextDecoder().decode(uint8Array)); // Hello
-
-  const repoRsp = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+async function Repos() {
+  const repoRsp = await fetch("https://api.github.com/users/zizifn/repos", {
+    headers: {
+      Authorization:
+        "Bearer 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",
+    },
+  });
   console.log(repoRsp.ok);
   if (!repoRsp.ok) {
     return <div>failed to fetch repos</div>;
   }
-
-  // const readable = repoRsp.body!.getReader();
-  // while (true) {
-  //   const { done, value } = await readable.read();
-  //   if (done) {
-  //     break;
-  //   }
-  //   // console.log(value);
-  //   const uint8Array = value.slice(0);
-  //   const text = new TextDecoder().decode(uint8Array);
-  //   console.log(text);
-  // }
-
   const repos: Repo[] = await repoRsp.json();
-  console.log(repos);
-  // const repos: Repo[] = [];
+
+  sleep(2000);
+  // tailwind font size
   return (
     <>
-      {/* <SearchableRepo repos={repos}></SearchableRepo> */}
-      <div></div>
+      <div>totoal repo {repos.length}</div>
+      <Suspense fallback={<div>loading search...</div>}>
+        <SearchableRepo repos={repos}></SearchableRepo>
+      </Suspense>
     </>
   );
+}
+
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }

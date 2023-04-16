@@ -6,6 +6,8 @@
     "ms-vscode.vscode-typescript-tslint-plugin",
     "GitHub.copilot",
     "GitHub.copilot-labs",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "dsznajder.es7-react-js-snippets",
+    "pflannery.vscode-versionlens"
   ]
 }

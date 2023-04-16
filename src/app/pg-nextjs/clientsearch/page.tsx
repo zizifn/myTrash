@@ -22,12 +22,7 @@ export default function ClientSearch() {
 }
 
 async function Repos() {
-  const repoRsp = await fetch("https://api.github.com/users/zizifn/repos", {
-    headers: {
-      Authorization:
-        "Bearer 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",
-    },
-  });
+  const repoRsp = await fetch("https://api.github.com/users/zizifn/repos");
   console.log(repoRsp.ok);
   if (!repoRsp.ok) {
     return <div>failed to fetch repos</div>;

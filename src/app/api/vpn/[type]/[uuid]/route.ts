@@ -1,4 +1,4 @@
-import { getCalshConfig } from "./clash-config";
+import { getCalshConfig, getV2rayNConfig } from "./clash-config";
 export const config = {
   runtime: "edge",
   // api: {
@@ -19,14 +19,19 @@ export async function GET(
     const [host, port, publicKey] = s.split(":");
     return {
       host,
-      port,
+      port: port || "443",
       publicKey,
     };
   });
   const { type, uuid } = context.params;
   if (context.params.type === "clash") {
-    console.log("-----");
     return new Response(getCalshConfig(uuid, servers), {
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+    });
+  } else if (context.params.type === "v2ray") {
+    return new Response(getV2rayNConfig(uuid, servers), {
       headers: {
         "Content-Type": "text/plain;charset=utf-8",
       },

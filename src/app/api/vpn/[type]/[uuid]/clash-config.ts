@@ -211,4 +211,16 @@ rules:
 `;
 }
 
-export { getCalshConfig };
+function getV2rayNConfig(
+  uuid: string,
+  servers: { host: string; port: string; publicKey: string }[]
+) {
+  const vlessReality = `vless://${uuid}@${servers[0].host}:${servers[0].port}?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.cloudflare.com&fp=random&pbk=${servers[0].publicKey}&sid=33b248aa17d05f9e&type=tcp&headerType=none#xtls-tcp-reality`;
+  const vlessVision = `vless://${uuid}@${servers[0].host}:${servers[0].port}?encryption=none&flow=xtls-rprx-vision&security=tls&type=tcp&headerType=none?obfs=none&tls=1&xtls=2#xray-vision`;
+  const cdnWS = `vless://${uuid}@${servers[1].host}:${servers[1].port}?security=tls&encryption=none&fp=random&type=ws#cdnws`;
+  const k8sWS = `vless://${uuid}@${servers[2].host}:${servers[2].port}?path=%2Fgtw%2Fnode-vless%2F%3Fed%3D2048&security=tls&encryption=none&type=ws#k8s`;
+  const subStr = `${vlessReality}\n${vlessVision}\n${cdnWS}\n${k8sWS}`;
+  return btoa(subStr);
+}
+
+export { getCalshConfig, getV2rayNConfig };

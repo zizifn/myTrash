@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "page:watch": "npx @cloudflare/next-on-pages --watch",
-    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --experimental-local"
+    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --local --log-level=debug --persist"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -19,7 +19,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "0.10.0",
+    "@cloudflare/next-on-pages": "0.10.1",
     "@cloudflare/workers-types": "^4.20230404.0",
     "@miniflare/tre": "^3.0.0-next.13",
     "@types/node": "18.16.3",

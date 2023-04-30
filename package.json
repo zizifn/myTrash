@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "page:watch": "npx @cloudflare/next-on-pages --watch",
-    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --local --log-level=debug --persist"
+    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --kv=MY_VPN_ACCTS  --local --log-level=debug --persist"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",

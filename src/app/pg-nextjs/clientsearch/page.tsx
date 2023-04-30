@@ -15,6 +15,7 @@ export default function ClientSearch() {
     <>
       <h2 className="h-10 text-xl text-cyan-400">client search demo</h2>
       <Suspense fallback={<div>loading repo...</div>}>
+        {/* @ts-expect-error */}
         <Repos></Repos>
       </Suspense>
     </>

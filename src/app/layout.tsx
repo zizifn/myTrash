@@ -1,4 +1,5 @@
 import "./globals.css";
+import NavBar from "./nav-bar";
 
 export const metadata = {
   title: "my trash app",
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="h-screen w-screen">{children}</body>
+      <body className="h-screen w-screen">
+        <NavBar></NavBar>
+        {children}
+      </body>
     </html>
   );
 }

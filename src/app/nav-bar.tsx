@@ -19,12 +19,12 @@ export default function NavBar() {
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto lg:hidden"
+                    className="block h-8 w-8 lg:hidden"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
+                    className="hidden h-8 w-8 lg:block"
                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                     alt="Your Company"
                   />
@@ -33,19 +33,19 @@ export default function NavBar() {
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
 
                   <Link
-                    className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                    className="inline-flex items-center border-b-2  px-1 pt-1 text-sm font-medium text-gray-900 hover:border-indigo-500 hover:text-gray-700 "
                     href={`/`}
                   >
                     Home
                   </Link>
                   <Link
-                    className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                    className="inline-flex items-center border-b-2  px-1 pt-1 text-sm font-medium text-gray-900 hover:border-indigo-500 hover:text-gray-700 "
                     href={`/playground`}
                   >
                     AI Playground
                   </Link>
                   <Link
-                    className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
+                    className="inline-flex items-center border-b-2  px-1 pt-1 text-sm font-medium text-gray-900 hover:border-indigo-500 hover:text-gray-700 "
                     href={`/vpn`}
                   >
                     VPN

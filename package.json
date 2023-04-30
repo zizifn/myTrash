@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "page:watch": "npx @cloudflare/next-on-pages --watch",
-    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat --kv=MY_VPN_ACCTS"
+    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --experimental-local"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -19,19 +19,20 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "typescript": "5.0.4",
-    "eslint": "8.39.0",
+    "@cloudflare/next-on-pages": "0.10.0",
+    "@cloudflare/workers-types": "^4.20230404.0",
+    "@miniflare/tre": "^3.0.0-next.13",
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
-    "@cloudflare/next-on-pages": "0.10.0",
-    "@cloudflare/workers-types": "^4.20230404.0",
     "autoprefixer": "^10.4.14",
+    "eslint": "8.39.0",
     "eslint-config-next": "^13.3.2",
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",
     "tailwindcss": "^3.3.2",
+    "typescript": "5.0.4",
     "vercel": "^28.20.0",
     "wrangler": "^2.17.0"
   }

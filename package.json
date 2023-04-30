@@ -26,14 +26,14 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^0.7.0",
+    "@cloudflare/next-on-pages": "^0.10.1",
     "@cloudflare/workers-types": "^4.20230404.0",
     "autoprefixer": "^10.4.14",
     "eslint-config-next": "^13.3.0",
     "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.7",
-    "tailwindcss": "^3.3.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwindcss": "^0.2.8",
+    "tailwindcss": "^3.3.2",
     "vercel": "^28.18.4",
     "wrangler": "^2.14.0"
   }

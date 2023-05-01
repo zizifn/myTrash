@@ -1,3 +1,4 @@
+import ClientRedirect from "@/components/client-redirect";
 import { PresetDropDown } from "@/components/preset";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <div>text box</div>
         <div>setting</div>
       </div>
+      <ClientRedirect></ClientRedirect>
     </div>
   );
 }

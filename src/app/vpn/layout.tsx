@@ -1,16 +1,21 @@
+import { getAuthUser } from "@/common/auth";
 import { CFWokersEnv } from "../env";
 import VPNAccounts from "./vpn-account";
+import ClientRedirect from "@/components/client-redirect";
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  console.log(process.env as any as CFWokersEnv);
-  const task = await (process.env as any as CFWokersEnv).MY_VPN_ACCTS.get(
-    "user_2Ov3lKiWpRKypgbowkua9Icw5rH"
-  );
+  const user = await getAuthUser();
+  if (!user) {
+    return <ClientRedirect></ClientRedirect>;
+  }
+
+  const task = await (process.env as any as CFWokersEnv).MY_VPN_ACCTS.get(user);
   console.log(task);
+
   return (
     <>
       <div className="m-0 flex h-full w-full flex-auto flex-row items-stretch justify-center p-0">

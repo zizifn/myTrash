@@ -1,0 +1,1 @@
+npx wrangler d1 execute NEXT_AUTH_DB --file .wrangler/state/d1/db.sql --local

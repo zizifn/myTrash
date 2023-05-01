@@ -1,0 +1,3 @@
+d1_databases = [
+    { binding = "NEXT_AUTH_DB", database_name = "NEXT_AUTH_DB", database_id = "c37b9ca3-21c2-4013-8cbd-97b2913f6cf91" },
+]

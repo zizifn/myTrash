@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev  -H 0.0.0.0 -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "page:watch": "npx @cloudflare/next-on-pages --watch",
-    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --kv=MY_VPN_ACCTS  --local --log-level=debug --persist"
+    "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --d1=NEXT_AUTH_DB --local --log-level=debug --persist"
   },
   "dependencies": {
+    "@auth/core": "^0.7.1",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
     "next": "13.2.4",
@@ -25,6 +26,7 @@
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
     "autoprefixer": "^10.4.14",
+    "better-sqlite3": "^8.0.1",
     "eslint": "8.39.0",
     "eslint-config-next": "^13.3.2",
     "postcss": "^8.4.23",

@@ -18,7 +18,7 @@ jobs:
           cache-dependency-path: package-lock.json
       # Run your project's build step
       - name: Build
-        run: npm install && npx https://prerelease-registry.devprod.cloudflare.dev/next-on-pages/runs/4786008794/npm-package-next-on-pages-191
+        run: npm install && npx https://prerelease-registry.devprod.cloudflare.dev/next-on-pages/runs/4786008794/npm-package-next-on-pages-191 --experimental-minify
       - name: Publish
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

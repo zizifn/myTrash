@@ -1,10 +1,5 @@
 import { getCalshConfig, getV2rayNConfig } from "./clash-config";
-export const config = {
-  runtime: "edge",
-  // api: {
-  //   bodyParser: true,
-  // }
-};
+export const runtime = "edge";
 
 type VPNType = "clash" | "v2ray";
 

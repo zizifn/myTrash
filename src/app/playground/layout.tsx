@@ -1,5 +1,5 @@
 import ClientRedirect from "@/components/client-redirect";
-
+export const runtime = "edge";
 export default function RootLayout({
   children,
 }: {

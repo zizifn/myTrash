@@ -1,5 +1,5 @@
 import { CFWokersEnv } from "@/app/env";
-
+export const runtime = "edge";
 export async function GET(request: Request) {
   console.log(process.env as any as CFWokersEnv);
   const task = await (process.env as any as CFWokersEnv).MY_VPN_ACCTS.put(

@@ -1,7 +1,7 @@
 import { CFWokersEnv } from "@/app/env";
 import { getAuthUser } from "@/common/auth";
 import { NextRequest, NextResponse } from "next/server";
-
+export const runtime = "edge";
 export async function GET(request: NextRequest) {
   const user = await getAuthUser();
   if (user) {

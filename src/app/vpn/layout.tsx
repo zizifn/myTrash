@@ -2,7 +2,7 @@ import { getAuthUser } from "@/common/auth";
 import { CFWokersEnv } from "../env";
 import VPNAccounts from "./vpn-account";
 import ClientRedirect from "@/components/client-redirect";
-
+export const runtime = "edge";
 export default async function RootLayout({
   children,
 }: {

@@ -1,5 +1,5 @@
 // import {WebSocketPair} from '@cloudflare/workers-types';
-
+export const runtime = "edge";
 export async function GET(request: Request) {
   const upgradeHeader = request.headers.get("Upgrade");
   if (!upgradeHeader || upgradeHeader !== "websocket") {

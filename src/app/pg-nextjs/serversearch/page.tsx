@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { SearchableRepo } from "./searchable-repo";
-
+export const runtime = "edge";
 export const metadata = {
   title: "client search demo",
   description: "trash app by zizifn",

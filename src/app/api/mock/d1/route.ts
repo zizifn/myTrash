@@ -1,5 +1,5 @@
 import { CFWokersEnv } from "@/app/env";
-
+export const runtime = "edge";
 export async function GET(request: Request) {
   console.log(process.env as any as CFWokersEnv);
   const authDB = await (process.env as any as CFWokersEnv).NEXT_AUTH_DB;

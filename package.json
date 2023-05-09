@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "page:build": "npx @cloudflare/next-on-pages",
     "page:watch": "npx @cloudflare/next-on-pages --watch",
     "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --d1=NEXT_AUTH_DB --local --log-level=debug --persist"
   },
@@ -21,7 +22,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "0.10.1",
+    "@cloudflare/next-on-pages": "0.0.0-b33639f",
     "@cloudflare/workers-types": "^4.20230419.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.6",
@@ -37,6 +38,6 @@
     "tailwindcss": "^3.3.2",
     "typescript": "5.0.4",
     "vercel": "^28.20.0",
-    "wrangler": "^2.19.0"
+    "wrangler": "^2.20.0"
   }
 }

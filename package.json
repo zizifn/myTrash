@@ -12,18 +12,17 @@
     "page:server": "wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat  --kv=MY_VPN_ACCTS  --d1=NEXT_AUTH_DB --local --log-level=debug --persist"
   },
   "dependencies": {
-    "@auth/core": "^0.7.1",
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
     "drizzle-orm": "^0.25.4",
-    "next": "13.4.1",
+    "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^0.0.0-4740c02",
-    "@cloudflare/workers-types": "^4.20230419.0",
+    "@cloudflare/next-on-pages": "^0.0.0-c70151d",
+    "@cloudflare/workers-types": "^4.20230511.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -31,7 +30,7 @@
     "better-sqlite3": "^8.3.0",
     "drizzle-kit": "^0.17.6",
     "eslint": "8.40.0",
-    "eslint-config-next": "^13.4.1",
+    "eslint-config-next": "^13.4.2",
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.2.8",

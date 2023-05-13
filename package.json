@@ -21,7 +21,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^0.0.0-c70151d",
+    "@cloudflare/next-on-pages": "^0.0.0-e2d2046",
     "@cloudflare/workers-types": "^4.20230511.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.6",

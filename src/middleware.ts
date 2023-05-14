@@ -1,8 +1,6 @@
 // middleware.ts
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
-import { CFWokersEnv } from "./app/env";
-
+import { NextRequest } from "next/server";
 const publicPaths = ["/", "/api/vpn*"];
 
 const isPublic = (path: string) => {
@@ -13,6 +11,8 @@ const isPublic = (path: string) => {
 
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {
+  console.log("----middleware-----");
+  // return NextResponse.next();
   // if (isPublic(request.nextUrl.pathname)) {
   //   return NextResponse.next();
   // }

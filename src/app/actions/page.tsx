@@ -1,4 +1,5 @@
 import { revalidatePath } from "next/cache";
+import { NextResponse } from "next/server";
 import React from "react";
 export const runtime = "edge";
 const users: {
@@ -12,7 +13,8 @@ export default function page() {
       name: data.get("name")?.toString() || "",
       id: data.get("id")?.toString() || "",
     });
-    revalidatePath("/actions");
+    // revalidatePath("/actions");
+    return users;
   }
 
   return (

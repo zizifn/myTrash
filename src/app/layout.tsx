@@ -8,9 +8,13 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: any;
 }) {
+  console.log("---root---", params);
+  const disAbleLayout = false;
   return (
     <html lang="en">
       <body className="h-screen w-screen">

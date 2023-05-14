@@ -11,7 +11,7 @@ const isPublic = (path: string) => {
 
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {
-  console.log("----middleware-----");
+  console.log("----middleware--222---");
   // return NextResponse.next();
   // if (isPublic(request.nextUrl.pathname)) {
   //   return NextResponse.next();

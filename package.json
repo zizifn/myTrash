@@ -26,8 +26,8 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "0.0.0-8a46b36",
-    "@cloudflare/workers-types": "^4.20230511.0",
+    "@cloudflare/next-on-pages": "1.0.1",
+    "@cloudflare/workers-types": "^4.20230518.0",
     "@types/node": "18.16.3",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -41,7 +41,6 @@
     "prettier-plugin-tailwindcss": "^0.2.8",
     "tailwindcss": "^3.3.2",
     "typescript": "5.0.4",
-    "vercel": "^28.20.0",
-    "wrangler": "^2.20.0"
+    "wrangler": "^3.0.1"
   }
 }

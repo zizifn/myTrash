@@ -13,14 +13,12 @@
     "publish": "wrangler pages publish .vercel/output/static/ --project-name=mytrash --branch=main"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.14",
-    "@heroicons/react": "^2.0.17",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
-    "@next/mdx": "^13.4.2",
-    "@types/mdx": "^2.0.5",
-    "drizzle-orm": "^0.25.4",
-    "next": "13.4.2",
+    "drizzle-orm": "^0.26.5",
+    "next": "13.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "zod": "^3.21.4"

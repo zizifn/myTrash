@@ -6,7 +6,8 @@ function getCalshConfig(
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: 0.0.0.0:9090
+external-controller: 127.0.0.1:9090
+secret:  ${uuid}
 proxies:
 - type: vless
   name: xtls-tcp-reality
